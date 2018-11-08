@@ -5,6 +5,7 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <h3 class="small">Aðgangur stofnaður: <%= l @user.created_at, format: :long %></h3>
       </h1>
     </section>
   </aside>
