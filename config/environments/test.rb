@@ -22,7 +22,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
   
-    host = 'https://a7c62520c98f4c60a2e548e45b5fdea4.vfs.cloud9.eu-west-1.amazonaws.com'
+  host = 'https://a7c62520c98f4c60a2e548e45b5fdea4.vfs.cloud9.eu-west-1.amazonaws.com'
   config.action_mailer.default_url_options = {host: host}
 
   # Raise exceptions instead of rendering exception templates.
