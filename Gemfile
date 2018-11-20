@@ -18,6 +18,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'social-share-button'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
