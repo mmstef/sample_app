@@ -11,7 +11,9 @@
         <%= render 'shared/stats' %>
     </section>
     <br>
+    <% if @user.bio? %>
      <em>Hvað er að frétta?:</em> <%= @user.bio %>
+    <% end %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
