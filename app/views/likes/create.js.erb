@@ -1,0 +1,2 @@
+$("li#<%= @micropost.id %> .likes span").html("<%= escape_javascript(render('likes/unlike')) %>")
+$("li#<%= @micropost.id %> .likes p").html("<%= @micropost.likes.count %> <%= (@micropost.likes.count) == 1 ? 'Like' : 'Likes'%>")

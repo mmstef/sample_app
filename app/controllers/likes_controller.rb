@@ -8,7 +8,11 @@ class LikesController < ApplicationController
     else
       @micropost.likes.create(user_id: current_user.id)
     end
-    redirect_to user_path(@micropost.user)
+    
+    respond_to do |format|
+      format.html { redirect_to (request.referer ? request.referer : user_path(@micropost.user)) }
+      format.js
+    end
   end
   
   def destroy
@@ -17,7 +21,11 @@ class LikesController < ApplicationController
     else
       @like.destroy
     end
-    redirect_to user_path(@micropost.user)
+    
+    respond_to do |format|
+      format.html { redirect_to (request.referer ? request.referer : user_path(@micropost.user)) }
+      format.js
+    end
   end
   
   def find_like
