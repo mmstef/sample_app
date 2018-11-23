@@ -1,4 +1,11 @@
 <% provide(:title, 'All users') %>
+
+<div class="searching">
+  <%= form_tag users_path, method: :get do |f| %>
+    <%= text_field_tag :search, @search, placeholder: "Search:", class: 'form-control' %>
+  <% end %>
+</div>
+
 <h1>All users</h1>
 
 <%= will_paginate %>
